@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+.maindiv{
+  /* background-image: url(../src/img/bacgro2.jpg); */
+  /* background-image: url(./assets/img/bacgro2.jpg); */
+  background-image: url(./config/assets/img/bacgro2.jpg);
+
+
+}
+
+.img-fluid{
+  height: 400px;
+  width: 200%;
+}
+.container{
+  /* background-image: url(/assets/img/bacgro1.jpg); */
+  background-image: url(./config/assets/img/bacgro1.jpg);
+
+  max-width:100%;
+
+}
+.divpaddingnull{
+  padding: 0px;
+}
