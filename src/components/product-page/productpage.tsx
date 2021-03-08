@@ -1,16 +1,9 @@
 import React from 'react'
 import './Productpage.css';
-import logo from '../src/img/bacgro.jpg'
-import red from '../src/img/red.jpg'
-import yellow from '../src/img/yellow.jpeg'
-// import green from '../src/img/green.jpg';
-import green from '../../assets/img/green.jpg'
 
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-// import myData from "./assets/db.json";
 import myData from '../../config/db.json';
 
 class Productpage extends React.Component{
@@ -24,7 +17,7 @@ class Productpage extends React.Component{
         this.cartItem = JSON.parse(localStorage.getItem("cartItems") || "[]");
         let findObj=this.cartItem.find((x:any)=>x.id==data.id);
         if(findObj){
-            return
+            return   window.location.href = "/cart";
         }
         if (!!this.cartItem && this.cartItem.length > 0) {
             this.cartItem.push(data);
@@ -34,6 +27,7 @@ class Productpage extends React.Component{
             localStorage.setItem("cartItems", JSON.stringify(this.cartItem));
         }
         window.location.href = "/cart";
+  
     }
     render(){
         this.getData();

@@ -1,7 +1,5 @@
 import React from 'react'
 import './cart.css';
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -63,17 +61,18 @@ class Cart extends React.Component {
 
     }
     onApplyCoupon(cal: any) {
-      
+        this.totalAmount=0;
         if (cal == "44F4T11") {
-            console.log("yes");
-            this.totalAmount=0;
-            this.setState(this.totalAmount);
+       this.totalAmount=100;
+       return this.totalAmount
             
         }
         else {
             console.log("no");
 
         }
+       return this.totalAmount
+
     }
     getCartItems() {
         this.cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
@@ -135,53 +134,7 @@ class Cart extends React.Component {
 
                                                     )
                                                 })}
-
-                                                {/* <tr>
-                  <th scope="row" className="border-0">
-                    <div className="p-2">
-                      <img  src={red} alt="" className="imgsize-cart-pro  rounded shadow-sm img-responsive"></img>
-                      
-                      <div className="ml-3 d-inline-block align-middle">
-                        <h5 className="mb-0"> <a href="#" className="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span className="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
-                      </div>
-                    </div>
-                  </th>
-                  <td className="border-0 align-middle"><strong>$79.00</strong></td>
-                  <td className="border-0 align-middle"><strong>3</strong></td>
-                  <td className="border-0 align-middle"><a href="#" className="text-dark"><i className="fa fa-trash"></i></a></td>
-                </tr>
-
-
-                <tr>
-                  <th scope="row">
-                    <div className="p-2">
-                      <img src={yellow}  alt="" width="70" className="imgsize-cart-pro rounded shadow-sm"></img>
-                      <div className="ml-3 d-inline-block align-middle">
-                        <h5 className="mb-0"><a href="#" className="text-dark d-inline-block">Lumix camera lense</a></h5><span className="text-muted font-weight-normal font-italic">Category: Electronics</span>
-                      </div>
-                    </div>
-                  </th>
-                  <td className="align-middle"><strong>$79.00</strong></td>
-                  <td className="align-middle"><strong>3</strong></td>
-                  <td className="align-middle"><a href="#" className="text-dark"><i className="fa fa-trash"></i></a>
-                  </td>
-                </tr>
-
-
-                <tr>
-                  <th scope="row">
-                    <div className="p-2">
-                      <img src={green}  alt="" width="70" className="imgsize-cart-pro rounded shadow-sm"></img>
-                      <div className="ml-3 d-inline-block align-middle">
-                        <h5 className="mb-0"><a href="#" className="text-dark d-inline-block">Lumix camera lense</a></h5><span className="text-muted font-weight-normal font-italic">Category: Electronics</span>
-                      </div>
-                    </div>
-                  </th>
-                  <td className="align-middle"><strong>$79.00</strong></td>
-                  <td className="align-middle"><strong>3</strong></td>
-                  <td className="align-middle"><a href="#" className="text-dark"><i className="fa fa-trash"></i></a>
-                  </td>
-                </tr> */}
+                       
                                             </tbody>
                                         </table>
                                     </div>
