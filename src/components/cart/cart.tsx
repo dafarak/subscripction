@@ -226,14 +226,11 @@ if(!!this.state.subtotal){
 
                                 {/* cart list */}
                                 <div className="col-lg-5 p-5 bg-white rounded shadow-sm mb-5">
-
                                     <div className="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
                                     <div className="p-4">
-                                        <p className="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
                                         <ul className="list-unstyled mb-4">
                                             <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Order Subtotal </strong><strong>${this.state.subtotal }</strong></li>
-                                            <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Shipping and handling</strong><strong>$0.00</strong></li>
-                                            <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Vaver</strong><strong>${this.state.couponamount}</strong></li>
+                                            <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Coupon Waiver</strong><strong>${this.state.couponamount}</strong></li>
                                                {/* couponsegment */}
                                     <div className="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
                                     <div className="p-4">
