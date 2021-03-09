@@ -17,11 +17,8 @@ function App() {
  
     <div className="container">
       <div className="row">
-    <div className="col-md-8">
+    <div className="col-md-12 main-image">
    <div className="container">
-
-
-
 <div id="carousel-id" className="carousel slide divpaddingnull" data-ride="carousel">
   <div className="carousel-inner" role="listbox">
     <div className="carousel-item active divpaddingnull">
@@ -31,33 +28,14 @@ function App() {
 </div>
 </div>
 </div>
-<div className="col-md-4 divpaddingnull">
-
-<div id="carousel-id" className="carousel slide" data-ride="carousel">
-  <div className="carousel-inner" role="listbox">
-    <div className="carousel-item active">
-      <img src={logo} alt="First slide" className="img-fluid"></img>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 <Router> 
-    {/* <div >
-      <Productpage />
-    </div> */}
- 
-
     <Switch> 
               <Route exact path='/' component={Productpage}></Route> 
-        
               <Route exact path='/cart' component={Cart}></Route> 
-
             </Switch> 
-   
     </Router>
     </div>
   );
 }
-
 export default App;

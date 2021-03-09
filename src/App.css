@@ -45,16 +45,27 @@
 }
 
 .img-fluid{
-  height: 400px;
+  height: 500px;
+  width: 200%;
+}
+.img-fluid-large{
+  margin: 0;
+  padding: 0;
+  height: 600px;
   width: 200%;
 }
 .container{
   /* background-image: url(/assets/img/bacgro1.jpg); */
-  background-image: url(./config/assets/img/bacgro1.jpg);
+  /* background-image: url(./config/assets/img/bacgro1.jpg); */
+  background-color:white;
 
   max-width:100%;
 
 }
 .divpaddingnull{
   padding: 0px;
+}
+.main-image{
+  padding-right: 0px;
+    padding-left: 0px
 }
